@@ -4,14 +4,14 @@
     :height="windowHeight"
     backgroundColor="#fff"
   >
-    <TableComponent :width="windowWidth / 2" :height="windowHeight / 2" />
+    <DetectiveTable :width="windowWidth / 2" :height="windowHeight / 2" />
   </Application>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
 import { Application } from 'vue3-pixi'
-import TableComponent from './components/table/TableComponent.vue'
+import DetectiveTable from './components/Table/DetectiveTable.vue'
 
 const windowWidth = computed(() => {
   return window.innerWidth

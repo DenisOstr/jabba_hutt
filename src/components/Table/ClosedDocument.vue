@@ -1,19 +1,20 @@
 <template>
   <sprite
-    :width="width"
-    :height="height"
     :position="{ x: positionX, y: positionY }"
-    :scale="{ x: 0.5, y: 0.5 }"
-    :anchor="0.5"
+    :scale="scale"
+    :anchor="anchor"
     texture="/assets/textures/table/folder.png"
   />
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
+
 defineProps<{
-  width: number
-  height: number
   positionX: number
   positionY: number
 }>()
+
+const scale = ref(0.5)
+const anchor = ref(0.5)
 </script>
