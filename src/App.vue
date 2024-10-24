@@ -4,14 +4,14 @@
     :height="windowHeight"
     backgroundColor="#fff"
   >
-    <BaseComponent :width="windowWidth" :height="windowHeight" />
+    <TableComponent :width="windowWidth / 2" :height="windowHeight / 2" />
   </Application>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
 import { Application } from 'vue3-pixi'
-import BaseComponent from './components/BaseComponent.vue'
+import TableComponent from './components/table/TableComponent.vue'
 
 const windowWidth = computed(() => {
   return window.innerWidth
